@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'ngx-card',
   standalone: true,
   imports: [],
-  template: './ngx-card.componet.html'
-  styles: ``
+  templateUrl: './ngx-cards.component.html',
+  styleUrl: './ngx-cards.component.css'
 })
 export class NgxCardsComponent {
 
