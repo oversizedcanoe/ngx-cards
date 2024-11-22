@@ -1,0 +1,6 @@
+/*
+ * Public API Surface of ngx-cards
+ */
+export * from './lib/ngx-cards.service';
+export * from './lib/ngx-cards.component';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL25neC1jYXJkcy9zcmMvcHVibGljLWFwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7R0FFRztBQUVILGNBQWMseUJBQXlCLENBQUM7QUFDeEMsY0FBYywyQkFBMkIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qXHJcbiAqIFB1YmxpYyBBUEkgU3VyZmFjZSBvZiBuZ3gtY2FyZHNcclxuICovXHJcblxyXG5leHBvcnQgKiBmcm9tICcuL2xpYi9uZ3gtY2FyZHMuc2VydmljZSc7XHJcbmV4cG9ydCAqIGZyb20gJy4vbGliL25neC1jYXJkcy5jb21wb25lbnQnO1xyXG4iXX0=

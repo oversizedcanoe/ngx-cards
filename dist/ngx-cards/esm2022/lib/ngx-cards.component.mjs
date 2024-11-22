@@ -1,0 +1,11 @@
+import { Component } from '@angular/core';
+import * as i0 from "@angular/core";
+export class NgxCardsComponent {
+    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.12", ngImport: i0, type: NgxCardsComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.2.12", type: NgxCardsComponent, isStandalone: true, selector: "ngx-card", ngImport: i0, template: "<div class=\"test\">\r\n    <p>\r\n        ngx-cards works!\r\n    </p>\r\n</div>\r\n", styles: [".test{background-color:red;height:4rem;width:4rem}\n"] });
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.12", ngImport: i0, type: NgxCardsComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'ngx-card', standalone: true, imports: [], template: "<div class=\"test\">\r\n    <p>\r\n        ngx-cards works!\r\n    </p>\r\n</div>\r\n", styles: [".test{background-color:red;height:4rem;width:4rem}\n"] }]
+        }] });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmd4LWNhcmRzLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1jYXJkcy9zcmMvbGliL25neC1jYXJkcy5jb21wb25lbnQudHMiLCIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtY2FyZHMvc3JjL2xpYi9uZ3gtY2FyZHMuY29tcG9uZW50Lmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxNQUFNLGVBQWUsQ0FBQzs7QUFTMUMsTUFBTSxPQUFPLGlCQUFpQjt3R0FBakIsaUJBQWlCOzRGQUFqQixpQkFBaUIsb0VDVDlCLHVGQUtBOzs0RkRJYSxpQkFBaUI7a0JBUDdCLFNBQVM7K0JBQ0UsVUFBVSxjQUNSLElBQUksV0FDUCxFQUFFIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcblxyXG5AQ29tcG9uZW50KHtcclxuICBzZWxlY3RvcjogJ25neC1jYXJkJyxcclxuICBzdGFuZGFsb25lOiB0cnVlLFxyXG4gIGltcG9ydHM6IFtdLFxyXG4gIHRlbXBsYXRlVXJsOiAnLi9uZ3gtY2FyZHMuY29tcG9uZW50Lmh0bWwnLFxyXG4gIHN0eWxlVXJsOiAnLi9uZ3gtY2FyZHMuY29tcG9uZW50LmNzcydcclxufSlcclxuZXhwb3J0IGNsYXNzIE5neENhcmRzQ29tcG9uZW50IHtcclxuXHJcbn1cclxuIiwiPGRpdiBjbGFzcz1cInRlc3RcIj5cclxuICAgIDxwPlxyXG4gICAgICAgIG5neC1jYXJkcyB3b3JrcyFcclxuICAgIDwvcD5cclxuPC9kaXY+XHJcbiJdfQ==
