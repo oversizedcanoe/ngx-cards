@@ -15,11 +15,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.12", ngImpo
 
 class NgxCardsComponent {
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.12", ngImport: i0, type: NgxCardsComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.2.12", type: NgxCardsComponent, isStandalone: true, selector: "ngx-card", ngImport: i0, template: "<div class=\"test\">\r\n    <p>\r\n        ngx-cards works!\r\n    </p>\r\n</div>\r\n", styles: [".test{background-color:#ff0;height:4rem;width:4rem}\n"] });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.2.12", type: NgxCardsComponent, isStandalone: true, selector: "ngx-card", ngImport: i0, template: "<div class=\"test\">\r\n    <h1>\r\n        123 Testing 123\r\n    </h1>\r\n</div>\r\n", styles: [".test{background-color:#00f;height:10rem;width:10rem}\n"] });
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.12", ngImport: i0, type: NgxCardsComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'ngx-card', standalone: true, imports: [], template: "<div class=\"test\">\r\n    <p>\r\n        ngx-cards works!\r\n    </p>\r\n</div>\r\n", styles: [".test{background-color:#ff0;height:4rem;width:4rem}\n"] }]
+            args: [{ selector: 'ngx-card', standalone: true, imports: [], template: "<div class=\"test\">\r\n    <h1>\r\n        123 Testing 123\r\n    </h1>\r\n</div>\r\n", styles: [".test{background-color:#00f;height:10rem;width:10rem}\n"] }]
         }] });
 
 /*

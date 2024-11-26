@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev": "ng build && cd && cd dist/ngx-cards && cd && npm link"
   },
   "private": true,
   "dependencies": {
