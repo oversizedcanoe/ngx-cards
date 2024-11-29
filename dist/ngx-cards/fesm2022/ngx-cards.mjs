@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Injectable, Component } from '@angular/core';
+import { Injectable, Component, Input } from '@angular/core';
 
 class NgxCardsService {
     constructor() { }
@@ -14,13 +14,32 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.12", ngImpo
         }], ctorParameters: () => [] });
 
 class NgxCardsComponent {
+    faceDown = true;
+    /**
+     * Optional parameter to reference a Deck instance.
+     */
+    deckRef;
+    /**
+     * Optional parameter to specify a specific card.
+     */
+    card;
+    fileName;
+    constructor() {
+        this.fileName = "";
+    }
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.12", ngImport: i0, type: NgxCardsComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.2.12", type: NgxCardsComponent, isStandalone: true, selector: "ngx-card", ngImport: i0, template: "<div class=\"test\">\r\n    <h1>\r\n        123 Testing 123\r\n    </h1>\r\n</div>\r\n", styles: [".test{background-color:#00f;height:10rem;width:10rem}\n"] });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.2.12", type: NgxCardsComponent, isStandalone: true, selector: "ngx-card", inputs: { faceDown: "faceDown", deckRef: "deckRef", card: "card" }, ngImport: i0, template: "<div>\r\n    <img src=\"/assets/cards/R1.svg\"/>\r\n\r\n</div>", styles: ["div{height:10rem;width:10rem}\n"] });
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.12", ngImport: i0, type: NgxCardsComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'ngx-card', standalone: true, imports: [], template: "<div class=\"test\">\r\n    <h1>\r\n        123 Testing 123\r\n    </h1>\r\n</div>\r\n", styles: [".test{background-color:#00f;height:10rem;width:10rem}\n"] }]
-        }] });
+            args: [{ selector: 'ngx-card', standalone: true, imports: [], template: "<div>\r\n    <img src=\"/assets/cards/R1.svg\"/>\r\n\r\n</div>", styles: ["div{height:10rem;width:10rem}\n"] }]
+        }], ctorParameters: () => [], propDecorators: { faceDown: [{
+                type: Input
+            }], deckRef: [{
+                type: Input
+            }], card: [{
+                type: Input
+            }] } });
 
 /*
  * Public API Surface of ngx-cards

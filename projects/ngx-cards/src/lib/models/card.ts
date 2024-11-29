@@ -1,5 +1,4 @@
 import { CardValue, Suit } from "../shared/enums";
-import { Joker } from "./joker";
 
 export class Card {
     suit: Suit;
@@ -24,10 +23,12 @@ export class Card {
 
     shorthandName() {
         let name: string = '';
+        let addFirstCharOfSuit: boolean = true;
 
         switch (this.value) {
             case CardValue.Joker:
                 name += "W"; // wild
+                addFirstCharOfSuit = false;
                 break;
             case CardValue.Ace:
                 name += "A";
@@ -45,7 +46,7 @@ export class Card {
                 name += this.value.toString();
         }
 
-        if (this instanceof Joker == false) {
+        if (addFirstCharOfSuit) {
             name += Suit[this.suit][0]; // first character of suit
         }
 

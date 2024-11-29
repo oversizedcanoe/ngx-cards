@@ -57,6 +57,11 @@
               {
                 "glob": "**/*",
                 "input": "projects/test-ngx-cards-app/public"
+              },
+              {
+                "glob": "**/*",
+                "input": "projects/ngx-cards/src/assets/cards",
+                "output": "/assets/cards/"
               }
             ],
             "styles": [

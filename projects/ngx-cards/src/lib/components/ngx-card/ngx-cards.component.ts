@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Deck } from '../../models/deck';
 import { Card } from '../../models/card';
 
@@ -10,7 +10,7 @@ import { Card } from '../../models/card';
   styleUrl: './ngx-cards.component.css'
 })
 
-export class NgxCardsComponent {
+export class NgxCardsComponent implements OnInit {
   @Input() faceDown: boolean = true;
 
   /**
@@ -26,11 +26,18 @@ export class NgxCardsComponent {
   public fileName: string;
 
   constructor() {
-    
-    this.fileName = "";
+    this.fileName = `/assets/cards/R1.svg`;
+   }
+  ngOnInit(): void {
+    if (this.card != undefined){
+      this.fileName = `/assets/cards/${this.card.shorthandName()}.svg`;
+    } 
+
+    alert(this.fileName);
   }
 
-
-
+  test() {
+    alert(this.card?.shorthandName());
+  }
 
 }

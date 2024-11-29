@@ -1,2 +1,2 @@
-export * from './lib/ngx-cards.service';
-export * from './lib/ngx-cards.component';
+export * from './lib/components/ngx-card/ngx-cards.service';
+export * from './lib/components/ngx-card/ngx-cards.component';
