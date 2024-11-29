@@ -5,7 +5,7 @@ export class Deck {
     private cards: Card[] = [];
     cardCount: number = this.cards.length;
 
-    constructor( jokersIncluded = false, shuffled = true) {
+    constructor(jokersIncluded = false, shuffled = true) {
         for (let suitIndex = 1; suitIndex < 5; suitIndex++) {
             for (let cardIndex = 1; cardIndex < 14; cardIndex++) {
                 this.cards.push(new Card(cardIndex, suitIndex));
@@ -25,13 +25,9 @@ export class Deck {
     }
 
     printDeck(): void {
-        let cards: string[] = [];
-
         this.cards.forEach(element => {
-            cards.push(element.shorthandName());
+            console.log(element.shorthandName());
         });
-
-        console.log(cards);
     }
 
     shuffle(): void {

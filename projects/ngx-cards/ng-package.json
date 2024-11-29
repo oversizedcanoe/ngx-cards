@@ -3,5 +3,10 @@
   "dest": "../../dist/ngx-cards",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": [{
+    "glob": "**/*",
+    "input": "./src/assets/cards",
+    "output": "/assets/cards"
+  }]
 }
