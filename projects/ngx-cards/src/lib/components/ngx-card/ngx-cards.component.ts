@@ -26,11 +26,11 @@ export class NgxCardsComponent implements OnInit {
   public fileName: string;
 
   constructor() {
-    this.fileName = `assets/cards/R1.svg`;
+    this.fileName = `/assets/cards/R1.svg`;
    }
   ngOnInit(): void {
     if (this.card != undefined){
-      this.fileName = `assets/cards/${this.card.shorthandName()}.svg`;
+      this.fileName = `/assets/cards/${this.card.shorthandName()}.svg`;
     } 
 
     alert(this.fileName);
