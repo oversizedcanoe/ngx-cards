@@ -1,3 +1,8 @@
+:host {
+    height: inherit;
+    width: inherit;
+}
+
 div {
     height: inherit;
     width: inherit;
