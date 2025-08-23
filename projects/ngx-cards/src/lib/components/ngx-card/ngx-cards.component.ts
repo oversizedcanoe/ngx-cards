@@ -32,8 +32,6 @@ export class NgxCardsComponent implements OnInit {
     if (this.card != undefined){
       this.fileName = `/assets/cards/${this.card.shorthandName()}.svg`;
     } 
-
-    alert(this.fileName);
   }
 
   test() {
