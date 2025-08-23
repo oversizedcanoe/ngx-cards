@@ -1,4 +1,10 @@
 div {
-    height: 10rem;
-    width: 10rem;
+    height: inherit;
+    width: inherit;
+}
+
+img { 
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
 }
