@@ -1,6 +1,16 @@
 {
   "name": "ngx-cards",
-  "version": "0.0.0",
+  "version": "0.0.0",  
+  "main": "dist/ngx-cards/fesm2022/ngx-cards.mjs",
+  "module": "dist/ngx-cards/fesm2022/ngx-cards.mjs",
+  "typings": "dist/ngx-cards/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ngx-cards/fesm2022/ngx-cards.mjs",
+      "types": "./dist/ngx-cards/index.d.ts",
+      "default": "./dist/ngx-cards/fesm2022/ngx-cards.mjs"
+    }
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
