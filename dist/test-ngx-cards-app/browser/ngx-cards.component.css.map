@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["projects/ngx-cards/src/lib/components/ngx-card/ngx-cards.component.css"],
-  "sourcesContent": ["div {\r\n    height: 10rem;\r\n    width: 10rem;\r\n}"],
-  "mappings": ";AAAA;AACI,UAAQ;AACR,SAAO;AACX;",
-  "names": []
-}
