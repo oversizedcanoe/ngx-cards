@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "prepare": "npm run build",
+    "prepare": "ng build ngx-cards",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
