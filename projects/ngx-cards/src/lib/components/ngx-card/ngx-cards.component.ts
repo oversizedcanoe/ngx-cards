@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angu
 import { Deck } from '../../models/deck';
 import { Card } from '../../models/card';
 import { Subject } from 'rxjs';
+import { FaceState } from '../../shared/enums';
 
 @Component({
   selector: 'ngx-card',
@@ -40,11 +41,14 @@ export class NgxCardsComponent implements OnInit, OnDestroy {
   }
 
   updateImageSource() {
-    if (this.card.isFaceDown) {
+    if (this.card.state == FaceState.FaceDown) {
       this.fileName = `/assets/cards/R1.svg`;
     }
-    else {
+    else if (this.card.state == FaceState.FaceUp) {
       this.fileName = `/assets/cards/${this.card.shorthandName()}.svg`;
+    }
+    else {
+      throw Error(`Unknown Card FaceState: ${this.card.state}`)
     }
   }
 }

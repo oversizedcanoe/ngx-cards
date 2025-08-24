@@ -1,19 +1,23 @@
 import { Subject } from "rxjs";
-import { CardValue, Suit } from "../shared/enums";
+import { CardValue, FaceState, Suit } from "../shared/enums";
 
 export class Card {
     public suit: Suit;
     public value: number;
-    public isFaceDown: boolean;
-    public flipped: Subject<boolean> = new Subject<boolean>();
+    public state: FaceState;
+    public flipped: Subject<FaceState> = new Subject<FaceState>();
 
-    constructor(value: number, suit: Suit, isFaceDown: boolean = true) {
-        if(value in CardValue == false){
+    constructor(value: number, suit: Suit, state: FaceState = FaceState.FaceDown) {
+        if (value in CardValue == false) {
             throw new Error(`Cannot create Card object with value: ${value}`)
         }
 
-        if(suit in Suit == false){
+        if (suit in Suit == false) {
             throw new Error(`Cannot create Card object with suit: ${suit}`)
+        }
+
+        if (state in FaceState == false) {
+            throw new Error(`Cannot create Card object with state: ${state}`)
         }
 
         if (suit == Suit.None && value != CardValue.Joker) {
@@ -22,12 +26,18 @@ export class Card {
 
         this.value = value;
         this.suit = suit;
-        this.isFaceDown = isFaceDown;
+        this.state = state;
     }
 
     public flip() {
-        this.isFaceDown = !this.isFaceDown;
-        this.flipped.next(this.isFaceDown);
+        if (this.state == FaceState.FaceDown) {
+            this.state = FaceState.FaceUp
+        }
+        else if (this.state == FaceState.FaceUp) {
+            this.state = FaceState.FaceDown;
+        }
+        
+        this.flipped.next(this.state);
     }
 
     public shorthandName() {

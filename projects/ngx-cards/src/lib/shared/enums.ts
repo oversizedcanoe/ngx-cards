@@ -22,3 +22,8 @@ export enum CardValue {
     Queen = 12,
     King = 13,
 }
+
+export enum FaceState {
+    FaceDown = 1,
+    FaceUp = 2,
+}
