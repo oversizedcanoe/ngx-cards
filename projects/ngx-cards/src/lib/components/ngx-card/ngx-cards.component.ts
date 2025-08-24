@@ -19,12 +19,6 @@ export class NgxCardsComponent implements OnInit, OnDestroy {
   @Input() card!: Card;
 
   /**
-   * Optional parameter to define if the card is face down or face up.
-   * Defaults to true (face down).
-   */
-  @Input() faceDown: boolean = true;
-
-  /**
    * Optional parameter to reference a Deck instance.
    */
   @Input() deckRef: Deck | undefined;

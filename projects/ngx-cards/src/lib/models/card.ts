@@ -4,10 +4,10 @@ import { CardValue, Suit } from "../shared/enums";
 export class Card {
     public suit: Suit;
     public value: number;
-    public isFaceDown: boolean = true;
+    public isFaceDown: boolean;
     public flipped: Subject<boolean> = new Subject<boolean>();
 
-    constructor(value: number, suit: Suit) {
+    constructor(value: number, suit: Suit, isFaceDown: boolean = true) {
         if(value in CardValue == false){
             throw new Error(`Cannot create Card object with value: ${value}`)
         }
@@ -22,6 +22,7 @@ export class Card {
 
         this.value = value;
         this.suit = suit;
+        this.isFaceDown = isFaceDown;
     }
 
     public flip() {
