@@ -1,8 +1,11 @@
+import { Subject } from "rxjs";
 import { CardValue, Suit } from "../shared/enums";
 
 export class Card {
-    suit: Suit;
-    value: number;
+    public suit: Suit;
+    public value: number;
+    public isFaceDown: boolean = true;
+    public flipped: Subject<boolean> = new Subject<boolean>();
 
     constructor(value: number, suit: Suit) {
         if(value in CardValue == false){
@@ -21,7 +24,12 @@ export class Card {
         this.suit = suit;
     }
 
-    shorthandName() {
+    public flip() {
+        this.isFaceDown = !this.isFaceDown;
+        this.flipped.next(this.isFaceDown);
+    }
+
+    public shorthandName() {
         let name: string = '';
         let addFirstCharOfSuit: boolean = true;
 

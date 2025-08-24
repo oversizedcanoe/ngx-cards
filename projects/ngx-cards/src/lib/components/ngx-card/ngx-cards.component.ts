@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { Deck } from '../../models/deck';
 import { Card } from '../../models/card';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'ngx-card',
@@ -10,7 +11,17 @@ import { Card } from '../../models/card';
   styleUrl: './ngx-cards.component.css'
 })
 
-export class NgxCardsComponent implements OnInit {
+export class NgxCardsComponent implements OnInit, OnDestroy {
+
+  /**
+   * Required parameter to specify a specific card.
+   */
+  @Input() card!: Card;
+
+  /**
+   * Optional parameter to define if the card is face down or face up.
+   * Defaults to true (face down).
+   */
   @Input() faceDown: boolean = true;
 
   /**
@@ -18,24 +29,28 @@ export class NgxCardsComponent implements OnInit {
    */
   @Input() deckRef: Deck | undefined;
 
-  /**
-   * Optional parameter to specify a specific card.
-   */
-  @Input() card: Card | undefined;
-
-  public fileName: string;
+  public fileName: string = '';
 
   constructor() {
-    this.fileName = `/assets/cards/R1.svg`;
-   }
+  }
+
   ngOnInit(): void {
-    if (this.card != undefined){
+    this.updateImageSource();
+    this.card.flipped.subscribe((_) => {
+      this.updateImageSource();
+    })
+  }
+
+  ngOnDestroy(): void {
+    this.card.flipped.unsubscribe();
+  }
+
+  updateImageSource() {
+    if (this.card.isFaceDown) {
+      this.fileName = `/assets/cards/R1.svg`;
+    }
+    else {
       this.fileName = `/assets/cards/${this.card.shorthandName()}.svg`;
-    } 
+    }
   }
-
-  test() {
-    alert(this.card?.shorthandName());
-  }
-
 }
