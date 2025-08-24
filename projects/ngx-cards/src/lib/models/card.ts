@@ -29,6 +29,14 @@ export class Card {
         this.state = state;
     }
 
+    public isFaceUp(): boolean {
+        return this.state == FaceState.FaceUp;
+    }
+
+    public isFaceDown(): boolean {
+        return this.isFaceUp() == false;
+    }
+
     public flip() {
         if (this.state == FaceState.FaceDown) {
             this.state = FaceState.FaceUp
@@ -36,7 +44,7 @@ export class Card {
         else if (this.state == FaceState.FaceUp) {
             this.state = FaceState.FaceDown;
         }
-        
+
         this.flipped.next(this.state);
     }
 
