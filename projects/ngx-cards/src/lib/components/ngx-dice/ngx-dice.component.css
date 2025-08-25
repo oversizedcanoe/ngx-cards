@@ -11,5 +11,6 @@ div {
 img { 
     height: inherit;
     width: inherit;
+    border-radius: 7px;
     object-fit: contain;
 }
