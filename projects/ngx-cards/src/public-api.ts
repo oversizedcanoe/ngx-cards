@@ -9,3 +9,4 @@ export * from './lib/models/deck';
 export * from './lib/models/joker';
 export * from './lib/shared/enums';
 export * from './lib/models/die';
+export * from './lib/models/dice';
