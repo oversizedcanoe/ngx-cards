@@ -38,6 +38,7 @@ public card: Card = new Card(4, Suit.Club);
  - Remove/clean up test project
  - Figure out better way to not require updating of consuming applications' `angular.json`
  - Remove dist folder from git
+ - Update examples and angular.json changes for dice
 
 ### Sources
 Playing card PNG source [here](https://www.me.uk/cards/makeadeck.cgi).

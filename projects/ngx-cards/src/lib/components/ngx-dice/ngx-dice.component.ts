@@ -14,7 +14,7 @@ export class NgxDiceComponent implements OnInit, OnDestroy {
   /**
    * Required parameter to specify an instance of a die.
    */
-  @Input() dice!: Die;
+  @Input() die!: Die;
 
   fileName: string = '';
 
@@ -22,14 +22,14 @@ export class NgxDiceComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.updateImageSource(this.dice.value);
-    this.dice.rolled.subscribe((newValue) => {
+    this.updateImageSource(this.die.value);
+    this.die.rolled.subscribe((newValue) => {
       this.updateImageSource(newValue);
     })
   }
 
   ngOnDestroy(): void {
-    this.dice.rolled.unsubscribe();
+    this.die.rolled.unsubscribe();
   }
 
   updateImageSource(newValue: number) {

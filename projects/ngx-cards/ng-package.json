@@ -4,9 +4,16 @@
   "lib": {
     "entryFile": "src/public-api.ts"
   },
-  "assets": [{
-    "glob": "**/*",
-    "input": "./src/assets/cards",
-    "output": "/assets/cards"
-  }]
+  "assets": [
+    {
+      "glob": "**/*",
+      "input": "./src/assets/cards",
+      "output": "/assets/cards"
+    },
+    {
+      "glob": "**/*",
+      "input": "./src/assets/dice",
+      "output": "./assets/dice"
+    }
+  ]
 }

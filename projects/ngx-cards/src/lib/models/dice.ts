@@ -37,7 +37,7 @@ export class Dice {
         return this.dice[index];
     }
 
-    rollDice() {
+    roll() {
         this.dice.forEach((die) =>{
             die.roll();
         })
