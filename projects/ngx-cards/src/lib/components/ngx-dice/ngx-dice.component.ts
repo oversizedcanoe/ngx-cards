@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { FaceState } from '../../shared/enums';
-import { Dice } from '../../models/dice';
+import { Die } from '../../models/die';
 
 @Component({
   selector: 'ngx-dice',
@@ -14,7 +14,7 @@ export class NgxDiceComponent implements OnInit, OnDestroy {
   /**
    * Required parameter to specify an instance of a die.
    */
-  @Input() dice!: Dice;
+  @Input() dice!: Die;
 
   fileName: string = '';
 

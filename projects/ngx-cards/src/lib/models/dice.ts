@@ -1,24 +1,57 @@
 import { Subject } from "rxjs";
+import { Die } from "./die";
 
 export class Dice {
-    public minValue: number = 1;
-    public maxValue: number;
-    public value: number = 1;
+    private dice: Die[] = [];
+
+    /**
+     * Subject which is sent each time all dice have completed their roll.
+     */
     public rolled: Subject<number> = new Subject<number>();
 
-    constructor(maxValue: number = 6){
-        if (maxValue < 1){
-            throw new Error(`Parameter ${maxValue} must be greater than or equal to 1`)
+    /**
+     * Create a group of die. To create an empty group, call the constructor with no parameters.
+     * Custom die can be added with dice.addDie(new Die(2)), dice.addDie(new Die(4)), etc.
+     * @param quantity Number of die in this group.
+     * @param maxDieValue The max value for each die in this group.
+     */
+    constructor(quantity: number = 0, maxDieValue: number = 6) {
+        for (let i = 0; i < quantity; i++) {
+            this.dice.push(new Die(maxDieValue));
         }
-        else if (maxValue > 6){
-            throw new Error('Currently only up to D6 is supported.')
-        }
-
-        this.maxValue = maxValue;
     }
 
-    public roll(){
-        this.value = Math.ceil(Math.random() * this.maxValue);
-        this.rolled.next(this.value);
+    /**
+     * Adds a custom die to the group.
+     * @param die Die to add to the group.
+     */
+    addDie(die: Die) {
+        this.dice.push(die);
+    }
+
+    getDie(index: number) {
+        if (index >= this.dice.length) {
+            throw new Error('Index too large');
+        }
+
+        return this.dice[index];
+    }
+
+    rollDice() {
+        this.dice.forEach((die) =>{
+            die.roll();
+        })
+
+        this.rolled.next(this.getTotal());
+    }
+
+    getTotal() {
+        let total = 0;
+
+        this.dice.forEach((die) => {
+            total += die.value;
+        })
+
+        return total;
     }
 }

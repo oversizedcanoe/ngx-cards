@@ -1,0 +1,11 @@
+/*
+ * Public API Surface of ngx-cards
+ */
+export * from './lib/components/ngx-card/ngx-cards.component';
+export * from './lib/components/ngx-dice/ngx-dice.component';
+export * from './lib/models/card';
+export * from './lib/models/deck';
+export * from './lib/models/joker';
+export * from './lib/shared/enums';
+export * from './lib/models/dice';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL25neC1jYXJkcy9zcmMvcHVibGljLWFwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7R0FFRztBQUVILGNBQWMsK0NBQStDLENBQUM7QUFDOUQsY0FBYyw4Q0FBOEMsQ0FBQztBQUM3RCxjQUFjLG1CQUFtQixDQUFDO0FBQ2xDLGNBQWMsbUJBQW1CLENBQUM7QUFDbEMsY0FBYyxvQkFBb0IsQ0FBQztBQUNuQyxjQUFjLG9CQUFvQixDQUFDO0FBQ25DLGNBQWMsbUJBQW1CLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxyXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2Ygbmd4LWNhcmRzXHJcbiAqL1xyXG5cclxuZXhwb3J0ICogZnJvbSAnLi9saWIvY29tcG9uZW50cy9uZ3gtY2FyZC9uZ3gtY2FyZHMuY29tcG9uZW50JztcclxuZXhwb3J0ICogZnJvbSAnLi9saWIvY29tcG9uZW50cy9uZ3gtZGljZS9uZ3gtZGljZS5jb21wb25lbnQnO1xyXG5leHBvcnQgKiBmcm9tICcuL2xpYi9tb2RlbHMvY2FyZCc7XHJcbmV4cG9ydCAqIGZyb20gJy4vbGliL21vZGVscy9kZWNrJztcclxuZXhwb3J0ICogZnJvbSAnLi9saWIvbW9kZWxzL2pva2VyJztcclxuZXhwb3J0ICogZnJvbSAnLi9saWIvc2hhcmVkL2VudW1zJztcclxuZXhwb3J0ICogZnJvbSAnLi9saWIvbW9kZWxzL2RpY2UnO1xyXG4iXX0=
