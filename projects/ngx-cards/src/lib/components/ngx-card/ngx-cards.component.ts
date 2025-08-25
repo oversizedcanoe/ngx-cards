@@ -1,7 +1,6 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Deck } from '../../models/deck';
 import { Card } from '../../models/card';
-import { Subject } from 'rxjs';
 import { FaceState } from '../../shared/enums';
 
 @Component({
@@ -15,7 +14,7 @@ import { FaceState } from '../../shared/enums';
 export class NgxCardsComponent implements OnInit, OnDestroy {
 
   /**
-   * Required parameter to specify a specific card.
+   * Required parameter to specify an instance of a card.
    */
   @Input() card!: Card;
 
@@ -24,15 +23,15 @@ export class NgxCardsComponent implements OnInit, OnDestroy {
    */
   @Input() deckRef: Deck | undefined;
 
-  public fileName: string = '';
+  fileName: string = '';
 
   constructor() {
   }
 
   ngOnInit(): void {
-    this.updateImageSource();
-    this.card.flipped.subscribe((_) => {
-      this.updateImageSource();
+    this.updateImageSource(this.card.state);
+    this.card.flipped.subscribe((newFaceState) => {
+      this.updateImageSource(newFaceState);
     })
   }
 
@@ -40,15 +39,15 @@ export class NgxCardsComponent implements OnInit, OnDestroy {
     this.card.flipped.unsubscribe();
   }
 
-  updateImageSource() {
-    if (this.card.state == FaceState.FaceDown) {
+  updateImageSource(state: FaceState) {
+    if (state == FaceState.FaceDown) {
       this.fileName = `/assets/cards/R1.svg`;
     }
-    else if (this.card.state == FaceState.FaceUp) {
+    else if (state == FaceState.FaceUp) {
       this.fileName = `/assets/cards/${this.card.shorthandName()}.svg`;
     }
     else {
-      throw Error(`Unknown Card FaceState: ${this.card.state}`)
+      throw Error(`Unknown Card FaceState: ${state}`)
     }
   }
 }

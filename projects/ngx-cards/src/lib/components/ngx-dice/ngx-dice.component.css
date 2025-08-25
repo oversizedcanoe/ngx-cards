@@ -1,0 +1,15 @@
+:host {
+    height: inherit;
+    width: inherit;
+}
+
+div {
+    height: inherit;
+    width: inherit;
+}
+
+img { 
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
+}
